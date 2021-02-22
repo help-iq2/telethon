@@ -1,7 +1,7 @@
 FROM sandy1709/catuserbot:test
 
 #clonning repo 
-RUN git clone -b bugs https://github.com/sandy1709/catuserbot.git /root/userbot
+RUN git clone -b test1 https://github.com/sandy1709/catuserbot.git /root/userbot
 #working directory 
 WORKDIR /root/userbot
 
