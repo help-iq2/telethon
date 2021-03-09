@@ -4,19 +4,19 @@
 _get_repolink () {
     local regex
     regex='(https?)://github.com/.+/.+'
-    if [[ $REPO == "goodcat" ]]
+    if [[ $UPSTREAM_REPO == "goodcat" ]]
     then
         echo "aHR0cHM6Ly9naXRodWIuY29tL3NhbmR5MTcwOS9jYXR1c2VyYm90L2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
-    elif [[ $REPO == "badcat" ]]
+    elif [[ $UPSTREAM_REPO == "badcat" ]]
     then
         echo "aHR0cHM6Ly9naXRodWIuY29tL2ppc2FuMDkvY2F0dXNlcmJvdC9hcmNoaXZlL21hc3Rlci56aXA=" | base64 -d
-    elif [[ $REPO =~ $regex ]]
+    elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
-        if [[ $BRANCH ]]
+        if [[ $UPSTREAM_REPO_BRANCH ]]
         then
-            echo "${REPO}/archive/${BRANCH}.zip"
+            echo "${UPSTREAM_REPO}/archive/${UPSTREAM_REPO_BRANCH}.zip"
         else
-            echo "${REPO}/archive/master.zip"
+            echo "${UPSTREAM_REPO}/archive/master.zip"
         fi
     else
         echo "aHR0cHM6Ly9naXRodWIuY29tL3NhbmR5MTcwOS9jYXR1c2VyYm90L2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
