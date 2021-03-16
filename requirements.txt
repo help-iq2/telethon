@@ -61,7 +61,7 @@ search-engine-parser
 selenium
 spamwatch
 speedtest-cli
-sqlalchemy
+sqlalchemy==1.3.23
 telegraph
 tswift
 validators
