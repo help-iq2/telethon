@@ -6,7 +6,7 @@ aiohttp
 beautifulsoup4
 cairosvg
 cfscrape
-coffeehouse
+coffeehouse==2.2.4
 colour
 covid
 cowpy
