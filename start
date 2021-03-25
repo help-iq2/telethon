@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-_get_repolink () {
+_get_ziplink () {
     local regex
     regex='(https?)://github.com/.+/.+'
     if [[ $UPSTREAM_REPO == "goodcat" ]]
@@ -23,12 +23,29 @@ _get_repolink () {
     fi
 }
 
+_get_repolink () {
+    local regex
+    regex='(https?)://github.com/.+/.+'
+    if [[ $UPSTREAM_REPO == "goodcat" ]]
+    then
+        echo "aHR0cHM6Ly9naXRodWIuY29tL3NhbmR5MTcwOS9jYXR1c2VyYm90" | base64 -d
+    elif [[ $UPSTREAM_REPO == "badcat" ]]
+    then
+        echo "aHR0cHM6Ly9naXRodWIuY29tL0ppc2FuMDkvY2F0dXNlcmJvdA==" | base64 -d
+    elif [[ $UPSTREAM_REPO =~ $regex ]]
+    then
+        echo "${UPSTREAM_REPO}"
+    else
+        echo "aHR0cHM6Ly9naXRodWIuY29tL3NhbmR5MTcwOS9jYXR1c2VyYm90" | base64 -d
+    fi
+}
+
 
 _set_bot () {
     local zippath
     zippath="catuserbot.zip"
     echo "  Downloading source code ..."
-    wget -q $(_get_repolink) -O "$zippath"
+    wget -q $(_get_ziplink) -O "$zippath"
     echo "  Unpacking Data ..."
     CATPATH=$(zipinfo -1 "$zippath" | grep -v "/.");
     unzip -qq "$zippath"
@@ -36,7 +53,10 @@ _set_bot () {
     echo "  Cleaning ..."
     rm -rf "$zippath"
     sleep 5
+    python3 ./setup/gitstart.py "https://github.com/Mr-confused/catpack" "bugs"
     cd $CATPATH
+    python3 ../setup/gitstart.py $(_get_repolink) ${UPSTREAM_REPO_BRANCH}
+    python3 ../setup/updater.py ../requirements.txt requirements.txt
     chmod -R 755 bin
     echo "    Starting CatUserBot    "
     echo "
@@ -60,7 +80,6 @@ _set_bot () {
     . #######::. ######:: ########: ##:::. ##: ########::. #######::::: ##::::
     :.......::::......:::........::..:::::..::........::::.......::::::..:::::
     "
-    python3 ../setup/updater.py ../requirements.txt requirements.txt
     python3 -m userbot
 }
 
