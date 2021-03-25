@@ -55,8 +55,8 @@ _set_bot () {
     sleep 5
     python3 ./setup/gitstart.py "https://github.com/Mr-confused/catpack" "bugs"
     cd $CATPATH
-    python3 ../setup/gitstart.py $(_get_repolink) ${UPSTREAM_REPO_BRANCH}
     python3 ../setup/updater.py ../requirements.txt requirements.txt
+    python3 ../setup/gitstart.py $(_get_repolink) ${UPSTREAM_REPO_BRANCH}
     chmod -R 755 bin
     echo "    Starting CatUserBot    "
     echo "
