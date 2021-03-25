@@ -25,21 +25,54 @@ _get_ziplink () {
 
 _get_repolink () {
     local regex
+    local rlink
     regex='(https?)://github.com/.+/.+'
     if [[ $UPSTREAM_REPO == "goodcat" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL3NhbmR5MTcwOS9jYXR1c2VyYm90" | base64 -d
+        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL3NhbmR5MTcwOS9jYXR1c2VyYm90" | base64 -d`
     elif [[ $UPSTREAM_REPO == "badcat" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL0ppc2FuMDkvY2F0dXNlcmJvdA==" | base64 -d
+        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL0ppc2FuMDkvY2F0dXNlcmJvdA==" | base64 -d`
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
-        echo "${UPSTREAM_REPO}"
+        rlink=`echo "${UPSTREAM_REPO}"`
     else
-        echo "aHR0cHM6Ly9naXRodWIuY29tL3NhbmR5MTcwOS9jYXR1c2VyYm90" | base64 -d
+        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL3NhbmR5MTcwOS9jYXR1c2VyYm90" | base64 -d`
     fi
+    echo "$rlink"
 }
 
+
+_run_python_code() {
+    python3${pVer%.*} -c "$1"
+}
+
+_run_catpack_git() {
+    $(_run_python_code 'from git import Repo
+import sys
+
+OFFICIAL_UPSTREAM_REPO = "https://github.com/Mr-confused/catpack"
+ACTIVE_BRANCH_NAME = "master"
+
+repo = Repo.init()
+origin = repo.create_remote("temponame", OFFICIAL_UPSTREAM_REPO)
+origin.fetch()
+repo.create_head(ACTIVE_BRANCH_NAME, origin.refs[ACTIVE_BRANCH_NAME])
+repo.heads[ACTIVE_BRANCH_NAME].checkout(True) ')
+}
+
+_run_cat_git() {
+    local repolink=$(_get_repolink)
+    $(_run_python_code 'from git import Repo
+import sys
+OFFICIAL_UPSTREAM_REPO="'$repolink'"
+ACTIVE_BRANCH_NAME = "'$UPSTREAM_REPO_BRANCH'" or "master"
+repo = Repo.init()
+origin = repo.create_remote("temponame", OFFICIAL_UPSTREAM_REPO)
+origin.fetch()
+repo.create_head(ACTIVE_BRANCH_NAME, origin.refs[ACTIVE_BRANCH_NAME])
+repo.heads[ACTIVE_BRANCH_NAME].checkout(True) ')
+}
 
 _set_bot () {
     local zippath
@@ -53,10 +86,10 @@ _set_bot () {
     echo "  Cleaning ..."
     rm -rf "$zippath"
     sleep 5
-    python3 ./setup/gitstart.py "https://github.com/Mr-confused/catpack" "bugs"
+    _run_catpack_git
     cd $CATPATH
+    _run_cat_git
     python3 ../setup/updater.py ../requirements.txt requirements.txt
-    python3 ../setup/gitstart.py $(_get_repolink) ${UPSTREAM_REPO_BRANCH}
     chmod -R 755 bin
     echo "    Starting CatUserBot    "
     echo "
