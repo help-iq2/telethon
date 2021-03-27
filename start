@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 _get_ziplink () {
     local regex
     regex='(https?)://github.com/.+/.+'
