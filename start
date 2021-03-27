@@ -10,6 +10,9 @@ _get_ziplink () {
     elif [[ $UPSTREAM_REPO == "badcat" ]]
     then
         echo "aHR0cHM6Ly9naXRodWIuY29tL2ppc2FuMDkvY2F0dXNlcmJvdC9hcmNoaXZlL21hc3Rlci56aXA=" | base64 -d
+    elif [[ $UPSTREAM_REPO == "arabiccat" ]]
+    then
+        echo "aHR0cHM6Ly9naXRodWIuY29tL0FOTDBLRS9jYXR1c2VyYm90L2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         if [[ $UPSTREAM_REPO_BRANCH ]]
@@ -33,6 +36,9 @@ _get_repolink () {
     elif [[ $UPSTREAM_REPO == "badcat" ]]
     then
         rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL0ppc2FuMDkvY2F0dXNlcmJvdA==" | base64 -d`
+    elif [[ $UPSTREAM_REPO == "arabiccat" ]]
+    then
+        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL0FOTDBLRS9jYXR1c2VyYm90" | base64 -d`
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         rlink=`echo "${UPSTREAM_REPO}"`
