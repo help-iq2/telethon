@@ -13,6 +13,7 @@ cowpy
 cryptg
 csvfaker
 DateTime
+dataclasses
 fontTools
 python-dotenv
 emoji
