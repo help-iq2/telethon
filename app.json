@@ -1,5 +1,5 @@
 {
-  "name": "Catuserbot",
+  "name": "telethon-Arabs",
   "description": "A simple Telegram userbot based on Telethon . Maintained by Sandeep ",
   "logo": "https://telegra.ph/file/3d60313110c58684b31ea.jpg",
   "keywords": [
@@ -7,7 +7,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/sandy1709/catuserbot/",
+  "repository": "https://github.com/klanrali/telethon-Arabs/",
   "website": "#TODO",
   "success_url": "#TODO",
   "env": {
@@ -57,7 +57,7 @@
     },
     "TZ": {
       "description": "Required for Correct Time on autopic/get time. Know your timezone from http://www.timezoneconverter.com/cgi-bin/findzone.tzc",
-      "value": "Asia/Kolkata",
+      "value": "Asia/Baghdad",
       "required": false
     },
     "UPSTREAM_REPO": {
