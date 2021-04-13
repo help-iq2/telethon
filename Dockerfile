@@ -1,7 +1,7 @@
-FROM sandy1709/catuserbot:alpine
+FROM klanrali/telethon-Arabs:alpine
 
 #clonning repo 
-RUN git clone https://github.com/sandy1709/catuserbot.git /root/userbot
+RUN git clone https://github.com/klanrali/telethon-Arabs.git /root/userbot
 #working directory 
 WORKDIR /root/userbot
 
