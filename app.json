@@ -62,7 +62,7 @@
     },
     "UPSTREAM_REPO": {
       "description": "Use either goodcat or badcat .if you need custom deploy then type your git repo link",
-      "value": "goodcat",
+      "value": "Telethon-Arabs",
       "required": false
     }
   },
