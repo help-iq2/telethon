@@ -3,15 +3,9 @@
 _get_ziplink () {
     local regex
     regex='(https?)://github.com/.+/.+'
-    if [[ $UPSTREAM_REPO == "goodcat" ]]
+    if [[ $UPSTREAM_REPO == "Telethon-Arabs" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL3NhbmR5MTcwOS9jYXR1c2VyYm90L2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
-    elif [[ $UPSTREAM_REPO == "Telethon-Arabs" ]]
-    then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL2tsYW5yYWxpL3RlbGV0aG9uLUFyYWJzLmdpdC9hcmNoaXZlL21hc3Rlci56aXA=" | base64 -d
-    elif [[ $UPSTREAM_REPO == "arabiccat" ]]
-    then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL0FOTDBLRS9jYXR1c2VyYm90L2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL2tsYW5yYWxpL3RlbGV0aG9uLUFyYWJzL2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         if [[ $UPSTREAM_REPO_BRANCH ]]
@@ -21,7 +15,7 @@ _get_ziplink () {
             echo "${UPSTREAM_REPO}/archive/master.zip"
         fi
     else
-        echo "aHR0cHM6Ly9naXRodWIuY29tL3NhbmR5MTcwOS9jYXR1c2VyYm90L2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL2tsYW5yYWxpL3RlbGV0aG9uLUFyYWJzL2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
     fi
 }
 
@@ -29,20 +23,14 @@ _get_repolink () {
     local regex
     local rlink
     regex='(https?)://github.com/.+/.+'
-    if [[ $UPSTREAM_REPO == "goodcat" ]]
+    if [[ $UPSTREAM_REPO == "Telethon-Arabs" ]]
     then
-        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL3NhbmR5MTcwOS9jYXR1c2VyYm90" | base64 -d`
-    elif [[ $UPSTREAM_REPO == "Telethon-Arabs" ]]
-    then
-        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL2tsYW5yYWxpL3RlbGV0aG9uLUFyYWJzLmdpdA==" | base64 -d`
-    elif [[ $UPSTREAM_REPO == "arabiccat" ]]
-    then
-        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL0FOTDBLRS9jYXR1c2VyYm90" | base64 -d`
+        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL2tsYW5yYWxpL3RlbGV0aG9uLUFyYWJz" | base64 -d`
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         rlink=`echo "${UPSTREAM_REPO}"`
     else
-        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL3NhbmR5MTcwOS9jYXR1c2VyYm90" | base64 -d`
+        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL2tsYW5yYWxpL3RlbGV0aG9uLUFyYWJz" | base64 -d`
     fi
     echo "$rlink"
 }
