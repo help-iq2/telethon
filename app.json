@@ -7,13 +7,13 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/klanrali/telethon-Arabs/",
+  "repository": "https://github.com/klanrali/telethon-Arabs-pack/",
   "website": "#TODO",
   "success_url": "#TODO",
   "env": {
     "ALIVE_NAME": {
-      "description": "give your name",
-      "value": "𝖽𝖾𝗏⁦㉨"
+      "description": "𝘋𝘈𝘝⁦",
+      "value": "𝘋𝘈𝘝⁦⁦"
     },
     "APP_ID": {
       "description": "اكتب هنا الايبي ايدي",
@@ -36,7 +36,7 @@
       "value": ""
     },
     "COMMAND_HAND_LER": {
-      "description": "Set this one with only one the symbol to use it before your command to run like . , ' `",
+      "description": "أتركة كما هوة",
       "value": ".",
       "required": false
     },
