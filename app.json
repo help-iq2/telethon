@@ -52,7 +52,8 @@
     },
     "HEROKU_APP_NAME": {
       "description": "أتركة فارغ",
-      "value": ""
+      "value": "",
+      "required": false
       },
       "PRIVATE_GROUP_BOT_API_ID": {
       "description": "حط ايدي كروبك مهم جدا",
@@ -66,20 +67,23 @@
     },
     "PMPERMIT_PIC": {
       "description": "حط رابط صورتك اذا ماتعرف اتركه فارغ",
-      "value": ""
+      "value": "",
+      "required": false
       },
      "CUSTOM_PMPERMIT_TEXT": {
       "description": "اكتب كليشتك الي تريدها تضهر ببوت الحمايه",
-      "value": ""
+      "value": "",
+      "required": false
       },
     "DEFAULT_BIO": {
       "description": "خلي كتابه الي تريدها من تفعل بايو الوقتي اذا ماتعرفه اتركه",
       "value": "",
-      
-    },
+      "required": false
+      },
      "AUTONAME": {
       "description": "خلي كتابه الي تريدها من تفعل الاسم الوقتي اذا ماتعرفه اتركه",
-      "value": ""
+      "value": "",
+      "required": false
       },
     "TZ": {
       "description": "موقعك الحالي فقط امسح كلمه بغداد وحط عاصمه بلدك فقط",
