@@ -12,8 +12,8 @@
   "success_url": "#TODO",
   "env": {
     "ALIVE_NAME": {
-      "description": "𝘋𝘈𝘝⁦",
-      "value": "𝘋𝘈𝘝⁦⁦"
+      "description": "اكتب اسمك⁦",
+      "value": "اكتب اسمك⁦⁦"
     },
     "APP_ID": {
       "description": "اكتب هنا الايبي ايدي",
@@ -41,7 +41,7 @@
       "required": false
     },
     "ENV": {
-      "description": "أتركة كما هوة",
+      "description": "حط كود تيرمكس ايضا",
       "value": "ANYTHING",
       "required": false
     },
@@ -55,13 +55,33 @@
       "value": "",
       "required": false
     },
+      "PRIVATE_GROUP_BOT_API_ID": {
+      "description": "حط ايدي كروبك مهم جدا",
+      "value": "",
+      "required": false
+    },
+     "PRIVATE_GROUP_ID": {
+      "description": "حط ايدي كروبك ايضا مهم جدا",
+      "value": "",
+      "required": false
+    },
+    "PMPERMIT_PIC": {
+      "description": "حط رابط صورتك اذا ماتعرف اتركه فارغ",
+      "value": "",
+      "required": false
+    },
+     "CUSTOM_PMPERMIT_TEXT": {
+      "description": "اكتب كليشتك الي تريدها تضهر ببوت الحمايه",
+      "value": "",
+      "required": false
+    },
     "TZ": {
-      "description": "موقعك الحالي",
+      "description": "موقعك الحالي فقط امسح كلمه بغداد وحط عاصمه بلدك فقط",
       "value": "Asia/Baghdad",
       "required": false
     },
     "UPSTREAM_REPO": {
-      "description": "Use either Telethon-Ar or Telethon-Arbaic .if you need custom deploy then type your git repo link",
+      "description": "رابط السورس - لاتوصله",
       "value": "Telethon-Ar",
       "required": false
     }
