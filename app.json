@@ -85,6 +85,11 @@
       "value": "",
       "required": false
       },
+    "DEFAULT_PIC": {
+      "description": "ضع رابط الصوره التي تريدها عند تفعيل الصوره الوقتيه اذا ماعرفتها اتركها فارغه",
+      "value": "",
+      "required": false
+      },
     "TZ": {
       "description": "موقعك الحالي فقط امسح كلمه بغداد وحط عاصمه بلدك فقط",
       "value": "Asia/Baghdad",
