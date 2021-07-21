@@ -1,7 +1,7 @@
-FROM telethontesthelp/Telethon-arabb:alpine
+FROM telenothelp/Telethon-arabb:alpine
 
 #clonning repo 
-RUN git clone https://github.com/telethontesthelp/Telethon-arabb.git /root/userbot
+RUN git clone https://github.com/telenothelp/Telethon-arabb.git /root/userbot
 #working directory 
 WORKDIR /root/userbot
 
