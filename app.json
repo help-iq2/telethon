@@ -1,104 +1,45 @@
 {
-  "name": "telethon-Arabs",
-  "description": "Welcome to Arab Telethon Source Arabic Language Modifier Follow our official channel @ IQTHON",
-  "logo": "https://telegra.ph/file/686c46e34b1a5fa4ef467.jpg",
+  "name": "تليثون العرب",
+  "description": "اهلا بك في تنصيب تليثون العرب لمتابعه قناتنا : https://t.me/iqthon ",
+  "logo": "https://telegra.ph/file/277559574a1e241f5532e.jpg",
   "keywords": [
     "plugin",
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/telethontesthelp/telethon-Ar-pack/",
+  "repository": "https://github.com/telenothelp/telethon-Ar-pack/",
   "website": "#TODO",
   "success_url": "#TODO",
   "env": {
     "ALIVE_NAME": {
-      "description": "اكتب اسمك⁦",
-      "value": "⁦⁦"
+      "description": "اسمك الي بتليجرام",
+      "value": ""
     },
     "APP_ID": {
-      "description": "اكتب هنا الايبي ايدي",
+      "description": "ايبي ايدي",
       "value": ""
     },
     "API_HASH": {
-      "description": "اكتب هنا ألايبي هاش",
+      "description": "ألايبي هاش",
       "value": ""
     },
     "STRING_SESSION": {
-      "description": "ضع هنا كود تيرمكس",
+      "description": "كود تيرمكس",
       "value": ""
     },
     "TG_BOT_USERNAME": {
-      "description": "ضع هنا معرف البوت بدون @",
+      "description": "معرف البوت",
       "value": ""
     },
     "TG_BOT_TOKEN": {
-      "description": "ضع هنا توكن البوت الخاص بك",
+      "description": "توكن البوت",
       "value": ""
     },
-    "COMMAND_HAND_LER": {
-      "description": "أتركة كما هوة",
-      "value": ".",
-      "required": false
-    },
-    "ENV": {
-      "description": "حط كود تيرمكس ايضا",
-      "value": "ANYTHING",
-      "required": false
-    },
-    "HEROKU_API_KEY": {
-      "description": "أتركة فارغ",
-      "value": "",
-      "required": false
-    },
-    "HEROKU_APP_NAME": {
-      "description": "أتركة فارغ",
-      "value": "",
-      "required": false
-      },
-      "PRIVATE_GROUP_BOT_API_ID": {
-      "description": "حط ايدي كروبك مهم جدا",
-      "value": "",
-      "required": false
-    },
-     "PRIVATE_GROUP_ID": {
-      "description": "حط ايدي كروبك ايضا مهم جدا",
-      "value": "",
-      "required": false
-    },
-    "PMPERMIT_PIC": {
-      "description": "حط رابط صورتك اذا ماتعرف اتركه فارغ",
-      "value": "",
-      "required": false
-      },
-     "CUSTOM_PMPERMIT_TEXT": {
-      "description": "اكتب كليشتك الي تريدها تضهر ببوت الحمايه",
-      "value": "",
-      "required": false
-      },
-    "DEFAULT_BIO": {
-      "description": "خلي كتابه الي تريدها من تفعل بايو الوقتي اذا ماتعرفه اتركه",
-      "value": "",
-      "required": false
-      },
-     "AUTONAME": {
-      "description": "خلي كتابه الي تريدها من تفعل الاسم الوقتي اذا ماتعرفه اتركه",
-      "value": "",
-      "required": false
-      },
-    "DEFAULT_PIC": {
-      "description": "ضع رابط الصوره التي تريدها عند تفعيل الصوره الوقتيه اذا ماعرفتها اتركها فارغه",
-      "value": "",
-      "required": false
-      },
     "TZ": {
-      "description": "موقعك الحالي فقط امسح كلمه بغداد وحط عاصمه بلدك فقط",
+      "description": "الوقت http://www.timezoneconverter.com/cgi-bin/findzone.tzc",
       "value": "Asia/Baghdad",
       "required": false
-    },
-    "UPSTREAM_REPO": {
-      "description": "رابط السورس - لاتوصله",
-      "value": "Telethon-Ar",
-      "required": false
+    
     }
   },
   "addons": [{
