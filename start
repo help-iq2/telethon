@@ -5,7 +5,7 @@ _get_ziplink () {
     regex='(https?)://github.com/.+/.+'
     if [[ $UPSTREAM_REPO == "Telethon-Ar" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL3RlbGV0aG9udGVzdGhlbHAvVGVsZXRob24tYXJhYmIvYXJjaGl2ZS9tYXN0ZXIuemlw" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL3RlbGV0aG9uLUFyYWIvdGVsZXRob25Ob3cvYXJjaGl2ZS9tYXN0ZXIuemlw" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         if [[ $UPSTREAM_REPO_BRANCH ]]
@@ -15,7 +15,7 @@ _get_ziplink () {
             echo "${UPSTREAM_REPO}/archive/master.zip"
         fi
     else
-        echo "aHR0cHM6Ly9naXRodWIuY29tL3RlbGV0aG9udGVzdGhlbHAvVGVsZXRob24tYXJhYmIvYXJjaGl2ZS9tYXN0ZXIuemlw" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL3RlbGV0aG9uLUFyYWIvdGVsZXRob25Ob3cvYXJjaGl2ZS9tYXN0ZXIuemlw" | base64 -d
     fi
 }
 
@@ -69,13 +69,13 @@ repo.heads[ACTIVE_BRANCH_NAME].checkout(True) ')
 
 _set_bot () {
     local zippath
-    zippath="catuserbot.zip"
-    echo "  Downloading source code ..."
+    zippath="iqthon.zip"
+    echo "  تنزيل اكواد السورس ..."
     wget -q $(_get_ziplink) -O "$zippath"
-    echo "  Unpacking Data ..."
+    echo "  تنزيل تخزين السورس ..."
     CATPATH=$(zipinfo -1 "$zippath" | grep -v "/.");
     unzip -qq "$zippath"
-    echo "Done"
+    echo "تم الانتهاء"
     echo "  جـاري الاسـتراد لـتليثون الـعرب  ..."
     rm -rf "$zippath"
     sleep 5
@@ -84,17 +84,7 @@ _set_bot () {
     _run_cat_git
     python3 ../setup/updater.py ../requirements.txt requirements.txt
     chmod -R 755 bin
-    echo "    Starting Teletho-Ar    "
-    echo "
-                        :':::::'🇦🇪🇦🇪🇦🇪::::'🇸🇦🇸🇦🇸🇦::::
-                        '🇪🇬🇪🇬🇪🇬:::'🇩🇿🇩🇿🇩🇿:::...🇯🇴🇯🇴🇯🇴..:::::
-                         🇧🇭🇧🇭🇧🇭:::..:::'🇵🇰🇵🇰🇵🇰:::::: 🇱🇾🇱🇾🇱🇾:::::::
-                         :::::::':::🇲🇦🇲🇦🇲🇦:::: 🇴🇲🇴🇲🇴🇲:::::::
-                         ::::::: 🇰🇼🇰🇼🇰🇼:::: 🇱🇧🇱🇧🇱🇧:::::::
-                         :::::::: 🇸🇾🇸🇾🇸🇾:::::::
-                         ::::::::::🇪🇭🇪🇭🇪🇭:::::::
-                         🇮🇶🇮🇶::::::🇮🇶🇮🇶::::🇮🇶🇮🇶::::::🇮🇶🇮🇶:::::
-    "
+    echo "    1    "
 
     python3 -m userbot
 }
