@@ -1,51 +1,46 @@
 {
   "name": "تليثون العرب",
-  "description": "اهلا بك في تنصيب تليثون العرب لمتابعه قناتنا : https://t.me/iqthon ",
-  "logo": "https://telegra.ph/file/277559574a1e241f5532e.jpg",
+  "description": "A simple Telegram userbot based on Telethon . Maintained by Jisan ",
+  "logo": "https://telegra.ph/file/3d60313110c58684b31ea.jpg",
   "keywords": [
     "plugin",
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/telenothelp/telethon-Ar-pack/",
+  "repository": "https://github.com/telenothelp/Help/",
   "website": "#TODO",
   "success_url": "#TODO",
   "env": {
     "ALIVE_NAME": {
-      "description": "اسمك الي بتليجرام",
+      "description": "give your name",
       "value": ""
     },
     "APP_ID": {
-      "description": "ايبي ايدي",
+      "description": "Get this value from my.telegram.org! Please do not steal",
       "value": ""
     },
     "API_HASH": {
-      "description": "ألايبي هاش",
+      "description": "Get this value from my.telegram.org! Please do not steal",
       "value": ""
     },
     "STRING_SESSION": {
-      "description": "كود تيرمكس",
-      "value": ""
-    },
-    "TG_BOT_USERNAME": {
-      "description": "معرف البوت",
+      "description": "Get this value by running python3 telesetup.py locally or https://generatestringsession.sandeep1709.repl.run",
       "value": ""
     },
     "TG_BOT_TOKEN": {
-      "description": "توكن البوت",
+      "description": "Needed for inline buttons maker. Make a bot at http://telegram.dog/BotFather and get the token of your bot.Worth it. Get it.",
       "value": ""
     },
     "TZ": {
-      "description": "الوقت",
-      "value": "Asia/Baghdad",
+      "description": " الوقت",
+      "value": "Asia/Kolkata",
       "required": false
-    
     },
     "UPSTREAM_REPO": {
-      "description": "لاتغيرة !",
-      "value": "https://github.com/telethon-Arab/telethonNow",
+      "description": "لاتـغيره! ",
+      "value": "telethon-Ar",
       "required": false
-   }
+    }
   },
   "addons": [{
     "plan": "heroku-postgresql",
