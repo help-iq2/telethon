@@ -27,8 +27,12 @@
       "description": "ضع كود تيرمكس هنا",
       "value": ""
     },
+    "TG_BOT_USERNAME": {
+      "description": " ضع معرف البوت هنا",
+      "value": ""
+    },
     "TG_BOT_TOKEN": {
-      "description": "ضع توكن بوت هنا",
+      "description": "ضع توكن البوت هنا",
       "value": ""
     },
     "TZ": {
