@@ -1,7 +1,7 @@
 {
   "name": "تليثون العرب",
-  "description": "A simple Telegram userbot based on Telethon . Maintained by Jisan ",
-  "logo": "https://telegra.ph/file/3d60313110c58684b31ea.jpg",
+  "description": "تنصيب تليثون العرب الاصلي معرف قناتنا @iqthon ",
+  "logo": "https://telegra.ph/file/277559574a1e241f5532e.jpg",
   "keywords": [
     "plugin",
     "modular",
@@ -12,33 +12,33 @@
   "success_url": "#TODO",
   "env": {
     "ALIVE_NAME": {
-      "description": "give your name",
+      "description": "ضع اسمك الذي في تليجرام",
       "value": ""
     },
     "APP_ID": {
-      "description": "Get this value from my.telegram.org! Please do not steal",
+      "description": "ضع الايبي ايدي هنا",
       "value": ""
     },
     "API_HASH": {
-      "description": "Get this value from my.telegram.org! Please do not steal",
+      "description": "ضع الايبي هاش هنا",
       "value": ""
     },
     "STRING_SESSION": {
-      "description": "Get this value by running python3 telesetup.py locally or https://generatestringsession.sandeep1709.repl.run",
+      "description": "ضع كود تيرمكس هنا",
       "value": ""
     },
     "TG_BOT_TOKEN": {
-      "description": "Needed for inline buttons maker. Make a bot at http://telegram.dog/BotFather and get the token of your bot.Worth it. Get it.",
+      "description": "ضع توكن بوت هنا",
       "value": ""
     },
     "TZ": {
       "description": " الوقت",
-      "value": "Asia/Kolkata",
+      "value": "Asia/Baghdad",
       "required": false
     },
     "UPSTREAM_REPO": {
       "description": "لاتـغيره! ",
-      "value": "telethon-Ar",
+      "value": "Telethon-Ar",
       "required": false
     }
   },
