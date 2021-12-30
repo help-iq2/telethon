@@ -9,6 +9,7 @@ cowpy
 dataclasses
 DateTime
 emoji
+fake_useragent
 fonttools
 geopy
 gitpython
@@ -52,14 +53,14 @@ regex
 requests
 search-engine-parser
 selenium
-setuptools
+setuptools==47.1.1
 ShazamAPI
 spamwatch
 speedtest-cli
 sqlalchemy-json
 sqlalchemy==1.3.23
 telegraph
-git+https://github.com/telethon-Arab/Telethon
+git+https://github.com/sandy1709/Telethon
 tgcrypto
 tswift
 ujson
