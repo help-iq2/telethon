@@ -40,7 +40,12 @@
       "value": "Asia/Baghdad",
       "required": false
     
-    }
+    },
+    "UPSTREAM_REPO": {
+      "description": "لاتغيرة !",
+      "value": "https://github.com/telethon-Arab/telethonNow",
+      "required": false
+   }
   },
   "addons": [{
     "plan": "heroku-postgresql",
