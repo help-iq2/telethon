@@ -70,5 +70,5 @@ vcsi
 wand
 wget
 git+https://github.com/goldsmith/Wikipedia
-youtube-search-python
+youtube-search-python==1.4.6
 youtube_dl
