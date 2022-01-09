@@ -6,6 +6,7 @@ aiohttp
 beautifulsoup4
 cairosvg
 cfscrape
+ShazamAPI
 coffeehouse==2.2.4
 colour
 covid
@@ -71,4 +72,4 @@ vcsi
 wand
 wikipedia
 youtube_dl
-youtube-search-python
+youtube-search-python==1.4.6
