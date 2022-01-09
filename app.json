@@ -1,13 +1,9 @@
 {
   "name": "تليثون العرب",
-  "description": "تنصيب تليثون العرب الاصلي معرف قناتنا @iqthon ",
+  "description": "تنصيب تليثون العرب الاصلي معرف قناتنا @iqthon",
   "logo": "https://telegra.ph/file/277559574a1e241f5532e.jpg",
-  "keywords": [
-    "plugin",
-    "modular",
-    "productivity"
-  ],
-  "repository": "https://github.com/telenothelp/Help/",
+  "keywords": [    "plugin",    "modular",    "productivity"  ],
+  "repository": "https://github.com/Telethon-helper/Helper/",
   "website": "#TODO",
   "success_url": "#TODO",
   "env": {
