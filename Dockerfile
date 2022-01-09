@@ -1,4 +1,4 @@
-FROM telethonAr/telethonArab:slim-buster
+FROM telethonAr/telethonArab:alpine
 
 #clonning repo 
 RUN git clone https://github.com/TelethonAr/telethonArab.git /root/userbot
