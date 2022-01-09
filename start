@@ -1,9 +1,12 @@
 #!/bin/bash
 
-_get_ziplink () {
+_get_repolink () {
     local regex
     regex='(https?)://github.com/.+/.+'
     if [[ $UPSTREAM_REPO == "Telethon-Ar" ]]
+    then
+        echo "aHR0cHM6Ly9naXRodWIuY29tL3RlbGV0aG9uQXIvVGVsZXRob25BcmFiL2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
+    elif [[ $UPSTREAM_REPO == "Telethon-Ar" ]]
     then
         echo "aHR0cHM6Ly9naXRodWIuY29tL3RlbGV0aG9uQXIvVGVsZXRob25BcmFiL2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
@@ -19,74 +22,25 @@ _get_ziplink () {
     fi
 }
 
-_get_repolink () {
-    local regex
-    local rlink
-    regex='(https?)://github.com/.+/.+'
-    if [[ $UPSTREAM_REPO == "Telethon-Ar" ]]
-    then
-        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL3RlbGV0aG9uQXIvVGVsZXRob25BcmFi" | base64 -d`
-    elif [[ $UPSTREAM_REPO =~ $regex ]]
-    then
-        rlink=`echo "${UPSTREAM_REPO}"`
-    else
-        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL3RlbGV0aG9uQXIvVGVsZXRob25BcmFi" | base64 -d`
-    fi
-    echo "$rlink"
-}
 
-
-_run_python_code() {
-    python3${pVer%.*} -c "$1"
-}
-
-_run_catpack_git() {
-    $(_run_python_code 'from git import Repo
-import sys
-
-OFFICIAL_UPSTREAM_REPO = "https://github.com/Telethon-helper/Helper"
-ACTIVE_BRANCH_NAME = "master"
-
-repo = Repo.init()
-origin = repo.create_remote("temponame", OFFICIAL_UPSTREAM_REPO)
-origin.fetch()
-repo.create_head(ACTIVE_BRANCH_NAME, origin.refs[ACTIVE_BRANCH_NAME])
-repo.heads[ACTIVE_BRANCH_NAME].checkout(True) ')
-}
-
-_run_cat_git() {
-    local repolink=$(_get_repolink)
-    $(_run_python_code 'from git import Repo
-import sys
-OFFICIAL_UPSTREAM_REPO="'$repolink'"
-ACTIVE_BRANCH_NAME = "'$UPSTREAM_REPO_BRANCH'" or "master"
-repo = Repo.init()
-origin = repo.create_remote("temponame", OFFICIAL_UPSTREAM_REPO)
-origin.fetch()
-repo.create_head(ACTIVE_BRANCH_NAME, origin.refs[ACTIVE_BRANCH_NAME])
-repo.heads[ACTIVE_BRANCH_NAME].checkout(True) ')
-}
-
-_set_bot () {
+_setting_bot () {
     local zippath
     zippath="iqthon.zip"
-    echo "  تنزيل اكواد السورس ..."
-    wget -q $(_get_ziplink) -O "$zippath"
+    echo "   تنزيل اكواد السورس ..."
+    wget -q $(_get_repolink) -O "$zippath"
     echo "  تنزيل تخزين السورس ..."
     CATPATH=$(zipinfo -1 "$zippath" | grep -v "/.");
     unzip -qq "$zippath"
     echo "تم الانتهاء"
-    echo "  جـاري الاسـتراد لـتليثون الـعرب  ..."
     rm -rf "$zippath"
     sleep 5
-    _run_catpack_git
     cd $CATPATH
-    _run_cat_git
-    python3 ../setup/updater.py ../requirements.txt requirements.txt
-    chmod -R 755 bin
-    echo "    1    "
+    echo "جـاري الاسـتراد لـتليثون الـعرب  ..."
+    echo "1
+    "
 
+    python3 ../setup/updater.py ../requirements.txt requirements.txt
     python3 -m userbot
 }
 
-_set_bot
+_setting_bot
