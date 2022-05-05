@@ -1,4 +1,4 @@
-FROM telethonAr/telethonArab:alpine
+FROM telethonArab/TelethonAr:alpine
 
 #clonning repo 
 RUN git clone https://github.com/telethonArab/TelethonAr.git /root/userbot
