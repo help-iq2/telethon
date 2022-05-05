@@ -25,7 +25,7 @@ _get_repolink () {
 
 _setting_bot () {
     local zippath
-    zippath="iqthon.zip"
+    zippath="iqthon1.zip"
     echo "   تنزيل اكواد السورس ..."
     wget -q $(_get_repolink) -O "$zippath"
     echo "  تنزيل تخزين السورس ..."
