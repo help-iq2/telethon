@@ -10,6 +10,14 @@ cfscrape
 coffeehouse==2.2.4
 colour
 covid
+wget
+tgcrypto
+ujson
+urlextract
+sqlalchemy-json
+setuptools
+ShazamAPI
+randomstuff.py
 cowpy
 cryptg
 csvfaker
