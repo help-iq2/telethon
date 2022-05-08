@@ -1,43 +1,43 @@
 {
-  "name": "TelethonArab",
-  "description": "تنصيب تليثون العرب الاصلي معرف قناتنا @iqthon",
-  "logo": "https://telegra.ph/file/1971f31fcd4829829d9b7.jpg",
-  "keywords": [    "plugin",    "modular",    "productivity"  ],
+  "name": "Telethon - Arab",
+  "description": "اهلا بك في تليثون العرب",
+  "logo": "",
+  "keywords": ["plugin","modular","productivity"],
   "repository": "https://github.com/help-iq2/telethon",
   "website": "#TODO",
   "success_url": "#TODO",
   "env": {
     "ALIVE_NAME": {
-      "description": "ضع اسمك الذي في تليجرام",
+      "description": "هنا ضع اسم التلجرام الخاص بك",
       "value": ""
     },
     "APP_ID": {
-      "description": "ضع الايبي ايدي هنا",
+      "description": "هنا ضع الايبي ايدي الخاص بك يتكون من ارقام", 
       "value": ""
     },
     "API_HASH": {
-      "description": "ضع الايبي هاش هنا",
+      "description": "هنا ضع الايبي هاش الخاص بك يتكون من احرف و ارقام",
       "value": ""
     },
     "STRING_SESSION": {
-      "description": "ضع كود تيرمكس هنا",
+      "description": "هنا ضع كود تيرمكس الخاص بك",
       "value": ""
     },
     "TG_BOT_USERNAME": {
-      "description": " ضع معرف البوت هنا",
+      "description": "هنا ضع معرف بوتك بدون @",
       "value": ""
     },
     "TG_BOT_TOKEN": {
-      "description": "ضع توكن البوت هنا",
+      "description": "هنا ضع توكن بوتك",
       "value": ""
     },
     "TZ": {
-      "description": " الوقت",
+      "description": "المنطقه الزمنيه من القارة الخاصه بك وعاصمه بلدك",
       "value": "Asia/Baghdad",
       "required": false
     },
     "UPSTREAM_REPO": {
-      "description": "لاتـغيره! ",
+      "description": "لاتغيرة",
       "value": "TelethonAr",
       "required": false
     }
