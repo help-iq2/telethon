@@ -70,7 +70,6 @@ vcsi
 wand
 wget
 yt_dlp
-python3
 
 git+https://github.com/sandy1709/Telethon@beta
 git+https://github.com/goldsmith/Wikipedia
