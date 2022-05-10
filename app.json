@@ -31,6 +31,10 @@
       "description": "هنا ضع توكن بوتك",
       "value": ""
     },
+    "COMMAND_HAND_LER": {
+      "description": "ضع هنا رمز الأمر الذي تريدة أو اتركة كما هوة",
+      "value": "."
+    },
     "TZ": {
       "description": "المنطقه الزمنيه من القارة الخاصه بك وعاصمه بلدك",
       "value": "Asia/Baghdad",
