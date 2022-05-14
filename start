@@ -6,7 +6,7 @@ _get_ziplink () {
     regex='(https?)://github.com/.+/.+'
     if [[ $UPSTREAM_REPO == "TelethonAr" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL3RlbGV0aG9uQXJhYi90ZWxldGhvbkFyL2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL3RlbGV0aG9uQXJhYi90ZWxldGhvbkFyMS9hcmNoaXZlL21hc3Rlci56aXA=" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         if [[ $UPSTREAM_REPO_BRANCH ]]
@@ -16,7 +16,7 @@ _get_ziplink () {
             echo "${UPSTREAM_REPO}/archive/master.zip"
         fi
     else
-        echo "aHR0cHM6Ly9naXRodWIuY29tL3RlbGV0aG9uQXJhYi90ZWxldGhvbkFyL2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL3RlbGV0aG9uQXJhYi90ZWxldGhvbkFyMS9hcmNoaXZlL21hc3Rlci56aXA=" | base64 -d
     fi
 }
 
@@ -26,12 +26,12 @@ _get_repolink () {
     regex='(https?)://github.com/.+/.+'
     if [[ $UPSTREAM_REPO == "TelethonAr" ]]
     then
-        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL3RlbGV0aG9uQXJhYi90ZWxldGhvbkFyLmdpdA==" | base64 -d`
+        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL3RlbGV0aG9uQXJhYi90ZWxldGhvbkFyMQ==" | base64 -d`
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         rlink=`echo "${UPSTREAM_REPO}"`
     else
-        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL3RlbGV0aG9uQXJhYi90ZWxldGhvbkFyLmdpdA==" | base64 -d`
+        rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL3RlbGV0aG9uQXJhYi90ZWxldGhvbkFyMQ==" | base64 -d`
     fi
     echo "$rlink"
 }
@@ -68,7 +68,7 @@ repo.heads[ACTIVE_BRANCH_NAME].checkout(True) ')
 
 _set_bot () {
     local zippath
-    zippath="TelethonAr.zip"
+    zippath="TelethonAr11.zip"
     echo "جاري تنزيل اكواد السورس "
     wget -q $(_get_ziplink) -O "$zippath"
     echo " تفريغ البيانات "
