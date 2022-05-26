@@ -1,4 +1,4 @@
-#!/bin/bash
+
 
 
 _get_ziplink () {
@@ -87,7 +87,7 @@ _set_bot () {
     echo "
 
     "
-    python3 -m userbot
+    python3 -m iqthon
 }
 
 _set_bot
