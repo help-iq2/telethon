@@ -1,13 +1,13 @@
 FROM telethonArab/telethonAr:alpine
 
 #clonning repo 
-RUN git clone https://github.com/telethonArab/telethonAr/tree/master.git /root/userbot
+RUN git clone https://github.com/telethonArab/telethonAr/tree/master.git /root/iqthon
 #working directory 
-WORKDIR /root/userbot
+WORKDIR /root/iqthon
 
 # Install requirements
 RUN pip3 install -U -r requirements.txt
 
-ENV PATH="/home/userbot/bin:$PATH"
+ENV PATH="/home/iqthon/bin:$PATH"
 
-CMD ["python3","-m","userbot"]
+CMD ["python3","-m","iqthon"]
