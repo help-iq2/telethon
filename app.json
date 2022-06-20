@@ -1,7 +1,7 @@
 {
-  "name": "Telethon - Arab",
+  "name": "تليثون العرب",
   "description": "اهلا بك في تليثون العرب",
-  "logo": "",
+  "logo": "https://telegra.ph/file/f1b9e7e1a5b0f719bc5d9.png",
   "keywords": ["plugin","modular","productivity"],
   "repository": "https://github.com/help-iq2/telethon",
   "website": "#TODO",
@@ -20,23 +20,23 @@
       "value": ""
     },
     "STRING_SESSION": {
-      "description": "هنا ضع كود تيرمكس الخاص بك",
+      "description": " ضع كود تيرمكس",
       "value": ""
     },
     "TG_BOT_USERNAME": {
-      "description": "هنا ضع معرف بوتك بدون @",
+      "description": " ضع معرف بوتك بدون @",
       "value": ""
     },
     "TG_BOT_TOKEN": {
-      "description": "هنا ضع توكن بوتك",
+      "description": "ضع توكن بوتك",
       "value": ""
     },
     "COMMAND_HAND_LER": {
-      "description": "ضع هنا رمز الأمر الذي تريدة أو اتركة كما هوة",
+      "description": "اتركة كما هوة او ضع الأمر الذي تريده بدلا من النقطة",
       "value": "."
     },
     "TZ": {
-      "description": "المنطقه الزمنيه من القارة الخاصه بك وعاصمه بلدك",
+      "description": "ضع القاره / عاصمة بلدك ( اذا كنت لاتعرفه اتركة كما هوة )",
       "value": "Asia/Baghdad",
       "required": false
     },
