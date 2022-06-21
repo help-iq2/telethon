@@ -1,1 +1,1 @@
-worker: bash Arab1
+worker: bash k
