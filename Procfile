@@ -1,1 +1,1 @@
-worker: bash k
+worker: bash T
