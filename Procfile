@@ -1,1 +1,1 @@
-worker: bash T
+worker: bash IQ
