@@ -1,1 +1,1 @@
-web: bash IQ
+web: bash start
