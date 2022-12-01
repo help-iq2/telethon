@@ -1,10 +1,10 @@
-FROM python:3.8-slim-buster
-WORKDIR /app
-RUN apk add --update --no-cache p7zip
-COPY requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
-
-COPY . .
-
-
+FROM nikolaik/python-nodejs:python3.9-nodejs18
+RUN apt-get update -y && apt-get upgrade -y \
+    && apt-get install -y --no-install-recommends ffmpeg \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+COPY . /app/
+WORKDIR /app/
+RUN pip3 install --upgrade pip
+RUN pip3 install -U pip && pip3 install -U -r requirements.txt
 CMD ["bash","start"]
