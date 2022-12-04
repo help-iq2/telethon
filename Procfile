@@ -1,1 +1,1 @@
-web: bash IQ
+worker: bash IQ
