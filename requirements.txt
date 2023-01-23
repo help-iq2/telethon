@@ -4,10 +4,7 @@ aiohttp
 apscheduler
 cairosvg
 cloudscraper
-googletrans==3.1.0a0
-hijri_converter
 user_agent
-requests
 colour
 covid
 cowpy
