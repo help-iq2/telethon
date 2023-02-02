@@ -4,6 +4,7 @@ aiohttp
 apscheduler
 cairosvg
 cloudscraper
+user_agent
 colour
 covid
 cowpy
@@ -11,6 +12,7 @@ dataclasses
 pyminizip
 DateTime
 emoji
+pybase64
 fonttools
 geopy
 gitpython

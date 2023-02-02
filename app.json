@@ -1,7 +1,7 @@
 {
-  "name": "تليثون العرب",
-  "description": "اهلا بك في تليثون العرب",
-  "logo": "https://telegra.ph/file/f1b9e7e1a5b0f719bc5d9.png",
+  "name": "سورس تليثون العرب الاصلي",
+  "description": "اهلا بك في تليثون العرب الأصلي { @iqthon }",
+  "logo": "https://telegra.ph/file/aa0ee1b06ddcdcb40189a.jpg",
   "keywords": ["plugin","modular","productivity"],
   "repository": "https://github.com/help-iq2/telethon",
   "website": "#TODO",
@@ -52,14 +52,16 @@
       "version": "12"
     }
   }],
-  "buildpacks": [{
+"buildpacks": [{
     "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
   },{
     "url":"https://github.com/heroku/heroku-buildpack-google-chrome"
   },{
     "url":"https://github.com/heroku/heroku-buildpack-chromedriver"
   },{
-    "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"
+    "url": "https://github.com/riganf/heroku-buildpack-p7zip"
+  },{
+    "url": "https://github.com/rahulps1000/heroku-buildpack-nodejs"
   },{
     "url": "https://github.com/heroku/heroku-buildpack-apt.git"
   },{
